@@ -19,3 +19,17 @@ adicionar o abaixo para não usar o Jest padrão.
     ]
   }
 
+8- Criar diretorio e arquivo JS para os testes, exemplo:
+'\__tests__\negocio\formatadores\moeda.test.js'
+
+9- Funções do expect: (existem outras)
+toBe(): compara inteiro e texto.
+toBeCloseTo(): compara pontos flutuantes, faz arredondamento.
+toBeFalsy()/toBeTruthy(): compara valores boleanos.
+toEqual(): compara objetos, se as propriedades são iguais.
+
+10- Ver relatorios dos testes:
+No package.json adicionar 'collectCoverage' e 'collectCoverageFrom'.
+Executar 'npm test'.
+  > No diretorio 'coverage', botão direito -> Reveal in 'File Explorer'.
+  > Abrir arquivo 'coverage/lcov-report/index.html'.
