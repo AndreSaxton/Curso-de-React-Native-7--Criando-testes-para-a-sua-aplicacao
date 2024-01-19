@@ -33,3 +33,9 @@ No package.json adicionar 'collectCoverage' e 'collectCoverageFrom'.
 Executar 'npm test'.
   > No diretorio 'coverage', botão direito -> Reveal in 'File Explorer'.
   > Abrir arquivo 'coverage/lcov-report/index.html'.
+
+11- Para o teste ser automatico e não coletar o coverage.
+  > "test": "jest --watch --coverage=false",
+  > "testFinal": "jest"
+  > Agora podemos executar 'npm test' ou 'npm run testFinal'
+  
