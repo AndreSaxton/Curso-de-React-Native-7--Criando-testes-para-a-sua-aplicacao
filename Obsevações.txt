@@ -39,3 +39,6 @@ Executar 'npm test'.
   > "testFinal": "jest"
   > Agora podemos executar 'npm test' ou 'npm run testFinal'
   
+12- Para testar os Hooks.
+  > Precisa ver na 'package.json' a versão do React, para mim é "react": "17.0.1".
+  > Executar 'npm install --save-dev react-test-renderer@17.0.1 @testing-library/react-native @testing-library/react-hooks', sendo o '17.0.1' a versão do React.
