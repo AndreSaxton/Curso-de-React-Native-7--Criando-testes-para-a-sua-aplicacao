@@ -1,1 +1,7 @@
+1- Clonar projeto base:
 git clone <https://github.com/alura-cursos/react-native-criando-testes-para-sua-aplicacao.git>
+
+2- No diretorio da pasta executar 'npm install'
+3- executar 'npm start'
+4- em outro terminal executar 'npm run api'
+5- no App.js, tirar uso da <KeyboardAvoidingView>, ela causa erro no compilamento.
