@@ -2,6 +2,20 @@
 git clone <https://github.com/alura-cursos/react-native-criando-testes-para-sua-aplicacao.git>
 
 2- No diretorio da pasta executar 'npm install'
-3- executar 'npm start'
-4- em outro terminal executar 'npm run api'
-5- no App.js, tirar uso da <KeyboardAvoidingView>, ela causa erro no compilamento.
+3- Executar 'npm start'
+4- Em outro terminal executar 'npm run api'
+5- No App.js, tirar uso da <KeyboardAvoidingView>, ela causa erro no compilamento.
+
+6- Instalar Jest (para usar nos testes)
+expo install jest--expo jest
+
+7- No package.json, nos "scripts" adicionar "test": "jest"
+ > e executar 'npm test' para rodar o script de testes.
+adicionar o abaixo para não usar o Jest padrão.
+"jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+        "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
+  }
+
