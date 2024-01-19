@@ -29,6 +29,13 @@ const mockRequisicaoErro = () => {
 
 describe('repositorio/leilao', () => {
 
+    beforeEach(() => {
+        /* Para limpar o mock depois de cada teste.
+         * A obtemLeiloes é chamada em 2 testes e contador entende que foi executada 2 vezes.
+        */
+        apiLeiloes.get.mockClear();
+    });
+
     describe('obtemLeiloes', () => {
         it('deve retornar uma lista de leilões', async () => {
             apiLeiloes.get.mockImplementation(() => mockRequisicao(mockLeiloes));
@@ -36,6 +43,9 @@ describe('repositorio/leilao', () => {
             const leiloes = await obtemLeiloes();
 
             expect(leiloes).toEqual(mockLeiloes);
+
+            expect(apiLeiloes.get).toHaveBeenCalledWith('/leiloes');
+            expect(apiLeiloes.get).toHaveBeenCalledTimes(1);
         });
 
         it('deve retornar uma lista vazia quando a requisição falhar', async () => {
@@ -44,6 +54,9 @@ describe('repositorio/leilao', () => {
             const leiloes = await obtemLeiloes();
 
             expect(leiloes).toEqual([]);
+
+            expect(apiLeiloes.get).toHaveBeenCalledWith('/leiloes');
+            expect(apiLeiloes.get).toHaveBeenCalledTimes(1);
         });
     });
 
