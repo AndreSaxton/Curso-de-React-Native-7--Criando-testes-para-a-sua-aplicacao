@@ -1,0 +1,1 @@
+git clone <https://github.com/alura-cursos/react-native-criando-testes-para-sua-aplicacao.git>
